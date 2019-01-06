@@ -16,7 +16,7 @@ export default class CurrentlyReading extends Component {
     } catch (e) {
     }
 
-    fetch("https://cors.io/?https://www.goodreads.com/review/list_rss/12882530?shelf=currently-reading")
+    fetch(this.props.feed)
       .then(response => response.text())
       .then(response => new DOMParser().parseFromString(response, 'text/xml'))
       .then(xml => xml.querySelector("item"))

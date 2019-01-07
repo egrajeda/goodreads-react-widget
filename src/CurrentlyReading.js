@@ -50,7 +50,7 @@ export default class CurrentlyReading extends Component {
     return (
       <div>
         <img className="float-left mr-2" src={book.imageUrl} alt={book.title}/>
-        <h2>
+        <h2 className="text-truncate">
           <a href={book.url} target="_blank">{book.title}</a> by <a href={book.url} target="_blank">{book.author}</a>
         </h2>
         <p className="text-muted">

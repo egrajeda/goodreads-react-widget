@@ -43,17 +43,17 @@ export default class CurrentlyReading extends Component {
 
     if (!book) {
       return (
-        <div className="text-muted text-center">{this.props.loadingMessage}</div>
+        <div>{this.props.loadingMessage}</div>
       );
     }
 
     return (
       <div>
-        <img className="float-left mr-2" src={book.imageUrl} alt={book.title}/>
-        <h2 className="text-truncate">
+        <img src={book.imageUrl} alt={book.title}/>
+        <h2>
           <a href={book.url} target="_blank">{book.title}</a> by <a href={book.url} target="_blank">{book.author}</a>
         </h2>
-        <p className="text-muted">
+        <p>
           {book.description}
         </p>
       </div>
